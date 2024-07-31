@@ -1,0 +1,57 @@
+#cardContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gameCard {
+    width: 300px;
+
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.col-1 {
+    margin: auto;
+}
+
+.col-1 img{
+    width: 100px;
+    height: 100px;
+}
+
+/* Favourites area */
+#favArea {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Media query */
+
+@media screen and (max-width: 1400px) {
+    #cardContainer,#favArea {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    #cardContainer,#favArea {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .title {
+        text-align: center;
+    }
+    #cardContainer,#favArea {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+}
